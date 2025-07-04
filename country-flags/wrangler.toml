@@ -1,0 +1,10 @@
+name               = "worker-country-flag"
+compatibility_date = "2025-07-03"
+main               = "src/country-flags.js" # Worker's code location
+
+[observability.logs]
+enabled = true
+
+[[r2_buckets]]
+binding     = "BUCKET_COUNTRY_FLAGS" # Binding name in the worker's code
+bucket_name = "country-flags" # Name of the R2 bucket
